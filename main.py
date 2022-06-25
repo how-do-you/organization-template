@@ -72,8 +72,8 @@ def main(owner: str, name: str, options: dict):
     print("Deleting:\t\t", output)
     shutil.rmtree(output)
 
-
     for crate in options["crates"]:
+        print(f"Adding submodile {crate[0]}/{crates[1]}")
         subprocess.run(["git", "submodule","add",f"git@github.com:{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True)
 
 
