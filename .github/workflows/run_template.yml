@@ -9,7 +9,7 @@ jobs:
   build:
     name: Create from template
     runs-on: ubuntu-latest
-    if: github.event.repository.name != 'crate-template'
+    if: github.event.repository.name != 'organization-template'
     env:
       WORKFLOW_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
     steps:

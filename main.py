@@ -74,7 +74,7 @@ def main(owner: str, name: str, options: dict):
 
 
     for crate in options["crates"]:
-        subprocess.run(["git", "clone",f"git@github.com:{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True, stdout=subprocess.PIPE).stdout
+        subprocess.run(["git", "submodule","add",f"git@github.com:{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True, stdout=subprocess.PIPE).stdout
 
 
 if __name__ == "__main__":
