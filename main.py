@@ -74,9 +74,8 @@ def main(owner: str, name: str, options: dict):
 
     for crate in options["crates"]:
         print(f"Adding submodule {crate[0]}/{crates[1]}")
-        # https://github.com/rs-vride/root.git
-        subprocess.run(["git", "submodule","add",f"https://github.com/{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True)
-        # subprocess.run(["git", "submodule","add",f"git@github.com:{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True)
+        # subprocess.run(["git", "submodule","add",f"https://github.com/{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True)
+        subprocess.run(["git", "submodule","add",f"git@github.com:{crate[0]}/{crate[1]}.git",f"crates/{crate[1]}"], check=True)
 
 
 if __name__ == "__main__":
